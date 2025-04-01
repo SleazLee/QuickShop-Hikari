@@ -6,7 +6,7 @@
 
     <groupId>com.ghostchu</groupId>
     <artifactId>quickshop-hikari</artifactId>
-    <version>6.2.0.9-SNAPSHOT-4</version>
+    <version>6.2.0.9-RELEASE-1</version>
     <packaging>pom</packaging>
     <name>quickshop-hikari</name>
     <description>Another QuickShop fork</description>
@@ -14,7 +14,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <developer>Ghost-chu</developer>
+        <developer>QuickShop-Community</developer>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <qs.relocation>com.ghostchu.quickshop.shade</qs.relocation>
         <!-- common lib versions -->
@@ -50,6 +50,7 @@
         <compat.angelchest>13.6.1</compat.angelchest>
         <compat.bentobox>2.7.0</compat.bentobox>
         <compat.bungee>1.20-R0.2</compat.bungee>
+        <compat.dominion>4.2</compat.dominion>
         <compat.geyser>2.1.0-SNAPSHOT</compat.geyser>
         <compat.geyser.floodgate>2.0-SNAPSHOT</compat.geyser.floodgate>
         <compat.chestprotect>5.19.16</compat.chestprotect>
@@ -58,6 +59,7 @@
         <compat.eco>6.75.2</compat.eco>
         <compat.ecoenchants>12.19.3</compat.ecoenchants>
         <compat.elitemobs>9.2.3</compat.elitemobs>
+        <compat.fabledskyblock>3.5.1-SNAPSHOT</compat.fabledskyblock>
         <compat.griefprevention>17.0.0</compat.griefprevention>
         <compat.itemsadder>4.0.9</compat.itemsadder>
         <compat.lands>7.11.10</compat.lands>
@@ -164,7 +166,7 @@
                             </goals>
                             <configuration>
                                 <finalName>${project.name}-${project.version}</finalName>
-                               <!--   <outputDirectory>C:\Users\danie\Desktop\Github\TNE\QuickShop-Hikari\build-artifacts</outputDirectory> !-->
+                                <!--<outputDirectory>\QuickShop-Hikari\build-artifacts</outputDirectory>-->
                                 <createDependencyReducedPom>true</createDependencyReducedPom>
                                 <minimizeJar>false</minimizeJar>
                                 <createSourcesJar>true</createSourcesJar>
@@ -175,6 +177,7 @@
                                     <includes>
                                         <include>net.tnemc:*</include>
                                         <include>com.github.technicallycoded:*</include>
+                                        <include>com.tcoded.folialib:*</include>
                                         <include>com.github.technicallycoded.folialib:*</include>
                                         <include>com.ghostchu:quickshop*:*</include>
                                         <include>com.ghostchu.quickshop.compatibility:*:*</include>
@@ -200,7 +203,7 @@
                                         <shadedPattern>${qs.relocation}.tne</shadedPattern>
                                     </relocation>
                                     <relocation>
-                                        <pattern>com.github.technicallycoded</pattern>
+                                        <pattern>com.tcoded.folialib</pattern>
                                         <shadedPattern>com.ghostchu.quickshop.shade.com.tcoded</shadedPattern>
                                     </relocation>
                                     <relocation>
@@ -272,6 +275,7 @@
                         <encoding>UTF-8</encoding>
                         <excludePackageNames>com.ghostchu.quickshop.nonquickshopstuff.*</excludePackageNames>
                         <release>${java.version}</release>
+                        <!--<outputDirectory>\QuickShop-Hikari\build-artifacts\javadocs</outputDirectory>-->
                     </configuration>
                     <executions>
                         <execution>
@@ -459,8 +463,10 @@
         <module>compatibility/bungeecord-geyser</module>
         <module>compatibility/chestprotect</module>
         <module>compatibility/clearlag</module>
+        <module>compatibility/dominion</module>
         <module>compatibility/ecoenchants</module>
         <module>compatibility/elitemobs</module>
+        <module>compatibility/fabledskyblock</module>
         <module>compatibility/griefprevention</module>
         <module>compatibility/itemsadder</module>
         <module>compatibility/lands</module>
