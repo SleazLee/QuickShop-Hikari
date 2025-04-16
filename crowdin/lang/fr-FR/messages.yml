@@ -1,4 +1,4 @@
-break-shop-use-supertool: <yellow>You can break the shop by using the super tool.
+break-shop-use-supertool: <yellow>Vous pouvez casser la boutique en utilisant le super outil.
 fee-charged-for-price-change: <green>Vous payez <red>{0}<green> pour changer le prix.
 not-allowed-to-create: <red>Vous ne pouvez pas créer un shop ici.
 disabled-in-this-world: <red>QuickShop est désactivé dans ce monde
@@ -33,7 +33,7 @@ shop-out-of-space-name: <dark_purple>Votre boutique {0} est pleine !
 paste-disabled: |-
   <red>Paste functionality has been disabled! You cannot request technical support. <newline>Reason: {0}
 quick-fill:
-  entry-own: ' <yellow>- <red>[own] <aqua>{0} <light_purple>{1}'
+  entry-own: '<light_purple>'
   hover:
     - '<yellow>Nom : <aqua>{0}'
     - '<yellow>Propriétaire : <aqua>{0}'
@@ -88,11 +88,11 @@ reloading-status:
   scheduled: <green>Rechargement terminé. <gray>(Certaines modifications nécessitent un certain temps)
   require-restart: <green>Rechargement terminé. <yellow>(Certaines modifications nécessitent un redémarrage du serveur pour prendre effet)
   failed: <red>Rechargement échoué, vérifiez la console du serveur
-player-bought-from-your-store-tax: <green>{0} purchased {1} {2} from your shop and you earned {3} ({4} in taxes).
+player-bought-from-your-store-tax: <green>{0} a acheté {1} {2} de ta boutique et tu as gagné {3} ({4} in taxes).
 not-enough-space: <red>Il ne vous reste que {0} place(s) restante(s) pour ceci!
 shop-name-success: <green>Le nom de votre boutique a bien été défini à <yellow>{0}<green>.
 shop-staff-added: <green> {0} a été ajouté avec succès comme membre du personnel pour votre boutique.
-shop-staff-empty: <yellow>This shop have no staff members.
+shop-staff-empty: <yellow>Cette boutique n'a pas de Staff.
 shops-recovering: Récupération des boutiques à partir de la sauvegarde...
 virtual-player-component-hover: "<gray>This is a virtual player.\n<gray>Refers to a system account of this name with the same name.</gray>\n<green>UUID: <yellow>{0}</yellow></green>\n<green>Username: <yellow>{1}</yellow></green>\n<green>Display as: <yellow>{2}</yellow></green>"
 real-player-component-hover: "<gray>This is a real exists player.\n<green>UUID: <yellow>{0}</yellow></green>\n<green>Username: <yellow>{1}</yellow></green>\n<green>Display as: <yellow>{2}</yellow></green>\n<gray>If you wish to use a virtual system account with the same name, add <dark_gray>\"[]\"</dark_gray> to the both side of the username: <dark_gray>[{1}]</dark_gray>."
@@ -119,7 +119,7 @@ menu:
   item-holochat-data-too-large: <red>[Error] Item NBT is too large for showing
   stock: '<green>Stock restant<yellow>{0}'
   this-shop-is-buying: <green>Cette boutique <light_purple>ACHETE<green> des objets.
-  this-shop-is-frozen: <green>The shop is now in <red>freeze mode<green>.
+  this-shop-is-frozen: <green> La boutique est désormais en tant que <red> mode de gel<green>.
   successfully-sold: '<green>Vente réussie :'
   total-value-of-chest: '<green>Valeur totale du coffre: <yellow>{0}'
 currency-not-exists: <red>Impossible de trouver le mode actuel que vous voulez définir, cela est peut-être dû à une mauvaise orthographe ou ce mode n'est pas disponible dans ce monde.
