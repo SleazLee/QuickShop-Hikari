@@ -12,15 +12,16 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitRunnable;
+import com.tcoded.folialib.wrapper.task.WrappedTask;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.StringJoiner;
 
-public class DisplayAutoDespawnWatcher extends BukkitRunnable implements Reloadable, SubPasteItem {
+public class DisplayAutoDespawnWatcher implements Runnable, Reloadable, SubPasteItem {
 
   private final QuickShop plugin;
   private int range;
+  private WrappedTask task;
 
   public DisplayAutoDespawnWatcher(@NotNull final QuickShop plugin) {
 
@@ -82,10 +83,17 @@ public class DisplayAutoDespawnWatcher extends BukkitRunnable implements Reloada
     }
   }
 
-  @Override
-  public synchronized void cancel() throws IllegalStateException {
+  public void start(final int delay, final int period) {
+    task = QuickShop.folia().getScheduler().runTimer(this, delay, period);
+  }
 
-    super.cancel();
+  public void stop() {
+    try {
+      if(task != null && !task.isCancelled()) {
+        task.cancel();
+      }
+    } catch(final IllegalStateException ignored) {
+    }
     plugin.getReloadManager().unregister(this);
     plugin.getPasteManager().unregister(plugin.getJavaPlugin(), this);
   }
